@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <link
@@ -12,29 +13,52 @@
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-
+      
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
     <style>
 
-        /* width */
+      #myBtn {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: 1px; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: red; /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 15px; /* Some padding */
+        border-radius: 10px; /* Rounded corners */
+        font-size: 200px; /* Increase font size */
+      }
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+
       ::-webkit-scrollbar {
         width: 5px;
       }
 
-      /* Track */
       ::-webkit-scrollbar-track {
         box-shadow: inset 0 0 5px grey; 
         border-radius: 10px;
       }
       
-      /* Handle */
       ::-webkit-scrollbar-thumb {
         background: rgb(32, 199, 28,0.5); 
         border-radius: 10px;
       }
 
-      /* Handle on hover */
       ::-webkit-scrollbar-thumb:hover {
         background: rgb(18, 145, 16,0.5); 
       }
@@ -57,6 +81,8 @@
         color: white;
         height: 100%;
         width: 100%;
+        background-size:auto;
+        
       }
 
       .NavBar {
@@ -71,11 +97,10 @@
 
 
       .itsLogo{
-        width: 40px; 
-        height: 40px;
-        padding: auto;
-        margin-top:-25%;
-        display:inline-block;
+        width: 80px; 
+        height: 80px;
+        position:relative;
+        margin-top:-35%;
         filter: grayscale(100%) brightness(90%);
         transition:(0.5s);
         transform: scale(1);
@@ -90,14 +115,12 @@
       }
 
       #itsHeaderPhoto{
-        max-width: 100%; 
+        width: 100%; 
         height: auto;
         display:block;
 
       }
 
-      .Home:hover {
-      }
 
       .glyphicon glyphicon-search{
         filter:grayscale(0%) brightness(100%);
@@ -129,6 +152,7 @@
         margin:auto;
         display:flex;
         text-align:justify;
+        justify-content: center;
 
       }
 
@@ -258,6 +282,7 @@
         margin:2.5%;
         border-radius: 55px;
         background-color: rgb(99, 219, 145, 0.3);
+        transition:1s;
       }
 
       
@@ -268,7 +293,7 @@
         transition: 0.5s;
         overflow:hidden;
         padding:1.5%;
-        margin:2.5%;
+        margin:1%;
         border-radius: 55px;
         background-color: rgb(99, 219, 145, 0.3);
       }
@@ -316,9 +341,75 @@
         font-size: 15px;
       }
 
-  
+
+      .contactInfo{
+        height: 300px;
+        width: 50%;
+        border: 2px solid #fff;
+        padding:2.5%;
+        margin:5%;
+        margin-left:25%;
+        justify-content: center;
+      }
+
+      .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, 
+      .navbar-inverse .navbar-nav>.active>a:hover 
+      {
+      color: #fff;
+      background-color: #0f630d;
+      }
+
+      .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+      color: #fff;
+      background-color: #129110;
+      border-radius:5%;
+
+      }
+
+      .dropdown-menu>li>a {
+      display: block;
+      padding: 3px 20px;
+      clear: both;
+      font-weight: 400;
+      line-height: 1.42857143;
+      color: #333;
+      white-space: nowrap;
+  }
+
+  .dropdown-menu>li>a:hover {
+      display: block;
+      padding: 3px 20px;
+      clear: both;
+      font-weight: 400;
+      line-height: 1.42857143;
+      color: #333;
+      background-color: #129110;
+      white-space: nowrap;
+  }
+
+  .socialsLink{
+    display:inline;
+    font-family:Inter;
+    font-weight:bolder;
+    font-style: italic;
+    font-size: 20px;
+
+  }
+
+  [class^="bi-"]::before, [class*=" bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    margin-right:5%;
+}
 
     </style>
+
   </head>
 
   <body>
@@ -327,7 +418,7 @@
         <div class="navbar-header">
           <a id="itsHeader" class="navbar-brand" href="https://www.facebook.com/informationtechnologysocietyclub"
             >
-            <img class="itsLogo" src="https://cdn.discordapp.com/attachments/599605336575442944/1076530501038379161/297610083_7937232906316736_397468016715611913_n.png"
+            <img class="itsLogo" src="https://media.discordapp.net/attachments/599605336575442944/1077196086772498492/Untitled-1.png?width=664&height=664"
              alt="ITS Logo">
             </a>
         </div>
@@ -335,28 +426,37 @@
           <li id="homeButton" class="active"><a href="">Home</a></li>
           <li id="eventsButton"><a href="#eventsSection">Events</a></li>
           <li id="photosButton"><a href="#photosSection">Photos</a></li>
-          <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">About us
-            <span class="caret"> </a>
-              <ul class="dropdown-menu">
-                <li><a href="#president">Club President</a></li>
-                <li><a href="#vicepresident">Vice President</a></li>
-                <li><a href="#cto">CTO</a></li>
-              </ul>
-            </li>
+                    <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">About us
+                      <span class="caret"> </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#president">Club President</a></li>
+                          <li><a href="#vicepresident">Vice President</a></li>
+                          <li><a href="#cto">CTO</a></li>
+                        </ul>
+                      </li>
           <li id="contactButton"><a href="#contactSection">Contact Us</a></li>
+          <li id="aboutMe"><a href="https://www.facebook.com/xyxyrex/">About Me</a></li>
+          
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
         <form class="navbar-form navbar-center" action="/action_page.php">
-            <div class="input-group">
+            
+          <div class="input-group">
               <input type="text" class="form-control" placeholder="Search" name="search">
               <div class="input-group-btn">
                 <button class="btn btn-info btn-lm" type="submit">
                   <span class="glyphicon glyphicon-search"></span>
                   </button>
-                  <li id="aboutMe"><a href="https://www.facebook.com/xyxyrex/">Xyrex Kyle Salazar BSIT-1B</a></li>
-      </div>            
+
+            </div>    
+      </div>          
+        
     </nav>
-    <img id="itsHeaderPhoto" src="https://scontent.fmnl2-2.fna.fbcdn.net/v/t39.30808-6/297027448_7937230872983606_7675183536310958519_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeHqBFC8uckIKsxOA7L73fP_8pp74y61vYXymnvjLrW9hZpiQEkQpbn5cRgmJ7AR6OlBsGp9hAj50BcGvTqMrlzw&_nc_ohc=kAWP-LajspQAX90DAcT&_nc_ht=scontent.fmnl2-2.fna&oh=00_AfAyXYbuAfoiKXbujQrxwi64LgA6E170sDAPOTOylIiU-A&oe=63F6E438">
+    <img id="itsHeaderPhoto" src="https://media.discordapp.net/attachments/599605336575442944/1077196051024461884/297027448_7937230872983606_7675183536310958519_n.jpg?width=960&height=365">
     <div class="sectionTitle">
     <h id="eventsSection"> EVENTS</h>
     </div>
@@ -443,9 +543,43 @@
         <div class="sectionTitle">
           <h id="contactSection">CONTACT US</h>
           </div>
+          <div class="contactInfo">
+            <i class="bi-facebook" style="font-size:80px"></i>
+            <p class="socialsLink">www.facebook.com/informationtechnologysocietyclub</p>
+          </br>
+            <i class="bi-instagram" style="font-size:80px"></i>
+            <p class="socialsLink">@its_usls</p>
+          </div>
+
+          <div class="contactForm">
+        </div>
+
  
           <img class="hoverLogo" src="https://cdn.discordapp.com/attachments/599605336575442944/1076530501038379161/297610083_7937232906316736_397468016715611913_n.png">
 
-    
+          <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+          <div style="background-color:black;color:white;padding:30px">Scroll Down</div>
+          <div style="background-color:lightgrey;padding:30px 30px 2500px">This example demonstrates how to create a "scroll to top" button that becomes visible 
+            <strong>when the user starts to scroll the page</strong>.</div>
+          
+          <script>
+          let mybutton = document.getElementById("myBtn");
+          
+          window.onscroll = function() {scrollFunction()};
+          
+          function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 50) {
+              mybutton.style.display = "block";
+            } else {
+              mybutton.style.display = "none";
+            }
+          }
+          
+          function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }
+          </script>
   </body>
 </html>
