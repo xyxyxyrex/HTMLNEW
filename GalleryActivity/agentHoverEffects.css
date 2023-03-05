@@ -1,0 +1,76 @@
+.indivAgentWrapper #astra:hover{
+    filter: drop-shadow(5px 5px 5px #701f5c9a);
+}
+
+.indivAgentWrapper #breach:hover{
+    filter: drop-shadow(5px 5px 5px #bb4e0f9a);
+}
+
+.indivAgentWrapper #brimstone:hover{
+    filter: drop-shadow(5px 5px 5px #944f009a);
+}
+
+.indivAgentWrapper #chamber:hover{
+    filter: drop-shadow(5px 5px 5px #dfb600);
+}
+
+.indivAgentWrapper #cypher:hover{
+    filter: drop-shadow(5px 5px 5px #76d0e0);
+}
+
+.indivAgentWrapper #fade:hover{
+    filter: drop-shadow(5px 5px 5px #3f0031);
+}
+
+.indivAgentWrapper #harbor:hover{
+    filter: drop-shadow(5px 5px 5px #00a8709a);
+}
+
+.indivAgentWrapper #jett:hover{
+    filter: drop-shadow(5px 5px 5px #00e1ff);
+}
+
+.indivAgentWrapper #kayo:hover{
+    filter: drop-shadow(5px 5px 5px #0c00af9a);
+}
+
+.indivAgentWrapper #killjoy:hover{
+    filter: drop-shadow(5px 5px 5px #8adf01);
+}
+
+.indivAgentWrapper #neon:hover{
+    filter: drop-shadow(5px 5px 5px #0084ff);
+}
+
+.indivAgentWrapper #omen:hover{
+    filter: drop-shadow(5px 5px 5px #5900ff9a);
+}
+
+.indivAgentWrapper #phoenix:hover{
+    filter: drop-shadow(5px 5px 5px #ff73009a);
+}
+.indivAgentWrapper #raze:hover{
+    filter: drop-shadow(5px 5px 5px #ff9a48);
+}
+
+.indivAgentWrapper #reyna:hover{
+    filter: drop-shadow(5px 5px 5px #ff00bfb9);
+}
+
+.indivAgentWrapper #sage:hover{
+    filter: drop-shadow(5px 5px 5px #00ffaa);
+}
+
+.indivAgentWrapper #skye:hover{
+    filter: drop-shadow(5px 5px 5px #00d800);
+}
+
+.indivAgentWrapper #sova:hover{
+    filter: drop-shadow(5px 5px 5px #0063d4);
+}
+.indivAgentWrapper #viper:hover{
+    filter: drop-shadow(5px 5px 5px #045701);
+}
+.indivAgentWrapper #yoru:hover{
+    filter: drop-shadow(5px 5px 5px #006eff);
+}

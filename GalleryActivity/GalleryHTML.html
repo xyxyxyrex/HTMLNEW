@@ -5,8 +5,287 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="agentHoverEffects.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet" />
+   
+  <style>
+    .indivAgentWrapper {
+    text-align: center;
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .agentChildWrapper {
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  
+  .btn {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    display:flexbox;
+  }
+  
+  .btn:hover {
+    background-color: red;
+  }
+  
+  .btn.active {
+    background-color:rgba(0,0,0,0);
+    -webkit-filter: invert(100%);
+  }
+  .btn.active:hover{
+    background-color:red;
+    -webkit-filter: invert(0%);
+  }
+
+  #myBtnContainer{
+    display:flex;
+    margin:auto;
+    width:50%;
+    justify-content: center;
+    padding:1.5%;
+  }
+    
+  </style>
+   <script>
+    filterSelection("all")
+function filterSelection(c) {
+var x, i;
+x = document.getElementsByClassName("indivAgentWrapper");
+if (c == "all") c = "";
+for (i = 0; i < x.length; i++) {
+  w3RemoveClass(x[i], "show");
+  if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+}
+}
+
+function w3AddClass(element, name) {
+var i, arr1, arr2;
+arr1 = element.className.split(" ");
+arr2 = name.split(" ");
+for (i = 0; i < arr2.length; i++) {
+  if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+}
+}
+
+function w3RemoveClass(element, name) {
+var i, arr1, arr2;
+arr1 = element.className.split(" ");
+arr2 = name.split(" ");
+for (i = 0; i < arr2.length; i++) {
+  while (arr1.indexOf(arr2[i]) > -1) {
+    arr1.splice(arr1.indexOf(arr2[i]), 1);     
+  }
+}
+element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+btns[i].addEventListener("click", function(){
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+});
+}
+  </script>
   </head>
   <body>
-    Hello World!
+    <div class="parentWrapper">
+      <div class="nameWrapper">
+        <p class="myName">XYREX KYLE SALAZAR BSIT-1B</p>
+      </div>
+      <div class="titleWrapper">
+      </div>
+      <p class="AgentsTitle">AGENTS</p>
+
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"><svg class="showAllRolesIcon" xmlns="http://www.w3.org/2000/svg"
+         width="100" height="100"
+          viewBox="0 0 24 24">
+          <path d="M0 13.376L7.546 22 16.19 22 0 3.319zM13.956 17L21.535 17 24 13.303 24 4.086z"></path>
+          </svg></button>
+        <button class="btn" onclick="filterSelection('duelist')"><img class="roleIcons" src="/imgSrc/DuelistClassSymbol.webp"></button>
+        <button class="btn" onclick="filterSelection('initiator')"> <img class="roleIcons" src="/imgSrc/InitiatorClassSymbol.webp"></button>
+        <button class="btn" onclick="filterSelection('controller')"><img class="roleIcons" src="/imgSrc/ControllerClassSymbol.webp"></button>
+        <button class="btn" onclick="filterSelection('sentinel')"><img class="roleIcons" src="/imgSrc/SentinelClassSymbol.webp"></button>
+      </div>
+
+        <div id="agentChildWrapper">
+          <div class="indivAgentWrapper controller">
+            <img  id="astra" src="/imgSrc/astra.webp"/>
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                ASTRA
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper initiator">
+            <img id="breach"src="/imgSrc/breach.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                BREACH
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper controller">
+            <img  id="brimstone"src="/imgSrc/brimstone.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                BRIMSTONE
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper sentinel">
+            <img  id="chamber" src="/imgSrc/chamber.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                CHAMBER
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper sentinel">
+            <img  id="cypher"src="/imgSrc/cypher.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                CYPHER
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper initiator">
+            <img id="fade"src="/imgSrc/fade.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                FADE
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper controller">
+            <img id="harbor" src="/imgSrc/harbor.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                HARBOR
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper duelist">
+            <img id="jett" src="/imgSrc/jett.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                JETT
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper initiator">
+            <img id="kayo" src="/imgSrc/kayo.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                KAY-O
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper sentinel">
+            <img  id="killjoy"src="/imgSrc/kiljoy.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                KILLJOY
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper duelist">
+            <img  id="neon"src="/imgSrc/neon.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                NEON
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper controller">
+            <img id="omen"src="/imgSrc/omen.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                OMEN
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper duelist">
+            <img id="phoenix" src="/imgSrc/phoenix.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                PHOENIX
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper duelist">
+            <img id="raze" src="/imgSrc/raze.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                RAZE
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper duelist">
+            <img id="reyna" src="/imgSrc/reyna.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                REYNA
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper sentinel">
+            <img id="sage" src="/imgSrc/sage.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                SAGE
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper initiator">
+            <img id="skye"src="/imgSrc/skye.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                SKYE
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper initiator">
+            <img id="sova"src="/imgSrc/sova.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                SOVA
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper controller">
+            <img id="viper"src="/imgSrc/viper.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                VIPER
+              </p>
+            </div>
+          </div>
+          <div class="indivAgentWrapper duelist">
+            <img id="yoru" src="/imgSrc/yoru.webp" />
+            <div class="agentInfoWrapper">
+              <p class="agentInfo">
+                YORU
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
