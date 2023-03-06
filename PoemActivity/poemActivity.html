@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:wght@500&family=Kanit:wght@300&family=Quicksand:wght@600&display=swap"
+      rel="stylesheet" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Climate+Crisis&family=Josefin+Sans:wght@500&family=Kanit:wght@300&family=Quicksand:wght@600&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap"
+      rel="stylesheet" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Activity - Salazar BSIT1B</title>
+    <style>
+      body {
+        background: #111;
+      }
+      .songWrapper {
+        width: 80%;
+        height: auto;
+        text-align: center;
+        margin: auto;
+        margin-top: 2.5%;
+        border: 5px solid black;
+        font-family:'Lora';
+        justify-content:center;
+      }
+
+      .songWrapper>pre{
+        color:white;
+        font-size: 25px;
+      }
+
+      section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding:2px;
+        line-height: auto;
+      }
+      section img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      section h2 {
+        position: relative;
+        color: white;
+        font-size: 8em;
+        margin: auto;
+        font-family: "Tilt Warp";
+        display:block;
+      }
+
+      section h3{
+        position: relative;
+        color: white;
+        font-size: 3em;
+        margin: 0.5%;
+        display:block;
+        font-family:'Playfair Display';
+        text-decoration:none;
+      }
+
+      .showLyricsTag{
+        font-family:'Courier New', Courier, monospace;
+        display:flexbox;
+        margin:0;
+        font-size:2rem;
+        color:rgba(255, 255, 255,0.7);
+        cursor:default;
+        text-decoration: none;
+      }
+      .showLyricsTag:hover{
+        font-family:'Courier New', Courier, monospace;
+        display:flexbox;
+        margin:0;
+        font-size:2rem;
+        color:rgba(255, 255, 255,1);
+        cursor:default;
+        text-decoration: none;
+      }
+
+      .showLyricsWrapper{
+        display: flex;
+        align-items: center;
+      }
+      i{
+        display:inline;
+        color:rgba(255, 255, 255,0.7);
+        font-size:40px;
+        width:auto;
+        padding:10px;
+        text-decoration: none;
+      }
+
+      i:hover{
+        display:inline;
+        color:rgba(255, 255, 255,1);
+        font-size:40px;
+        width:auto;
+        padding:10px;
+        text-decoration: none;
+      }
+      body{
+        height:auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <img src="imgs/1.png" data-speed="-5" class="layer" />
+      <img src="imgs/mac2.png" data-speed="-2" class="layer" />
+      <img src="imgs/4.png" data-speed="2" class="layer" />
+      <img src="imgs/mac4.png" data-speed="-6" class="layer" />
+      <img src="imgs/7.png" data-speed="4" class="layer" />
+      <img src="imgs/mac3.png" data-speed="-6" class="layer" />
+      <img src="imgs/9.png" data-speed="5" class="layer" />
+      <img src="imgs/xyrexname.png" data-speed="-5" class="layer" />
+
+      <div class="layer">
+      <h2 class="layer" data-speed="3">Good News</h2>
+      <h3 class="layer" data-speed="2">Mac Miller</h2>
+        <div class="showLyricsWrapper">
+            <a href="#lyrics">
+            <i class="fa-solid fa-caret-down">
+            </i>
+        </a>
+        <div class="showLyricsTagWrapper">
+            <a href="#lyrics">
+        <p class="showLyricsTag">Show Lyrics</p>
+        </a>
+        </div>
+</div>
+    </div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      document.addEventListener("mousemove", parallax);
+
+      function parallax(e) {
+        this.querySelectorAll(".layer").forEach((layer) => {
+          const speed = layer.getAttribute("data-speed");
+
+          const x = (window.innerWidth - e.pageX * speed) / 100;
+          const y = (window.innerHeight - e.pageY * speed) / 100;
+
+          layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+      }
+    </script>
+
+    <div class="songWrapper">
+      <pre id="lyrics">
+        <section>
+            <img src="imgs/1.png" data-speed="-5" class="layer" />
+            <img src="imgs/2.png" data-speed="5" class="layer" />
+            <img src="imgs/mac1.png" data-speed="2" class="layer" />
+            <img src="imgs/8.png" data-speed="-6" class="layer" />
+            <img src="imgs/9.png" data-speed="5" class="layer" />
+I spent the whole day in my head
+Do a little spring cleaning, I'm always too busy dreaming
+Well, maybe I should wake up instead
+A lot of things I regret but I just say I forget
+Why can't it just be easy?
+Why does everybody need me to stay?
+Oh, I hate the feeling
+When you're high but you're underneath the ceiling
+Got the cards in my hand, I hate dealing
+Yeah
+Get everything I need, then I'm gone
+But it ain't stealing
+Can I get a break?
+I wish that I could just get out my goddamn way
+What is there to say?
+There ain't a better time than today
+Maybe I'll lay down for a little, yeah
+'Stead of always trying to figure everything out
+And all I do is say sorry
+Half the time, I don't even know what I'm saying it about
+Good news, good news, good news
+That's all they wanna hear
+No, they don't like it when I'm down
+But when I'm flying, oh, it make 'em so uncomfortable
+So different, what's the difference?
+When it ain't that bad
+It could always be worse
+I'm running out of gas, hardly anything left
+Hope I make it home from work
+Well, so tired of being so tired
+Why I gotta build something beautiful just to go set it on fire?
+I'm no liar, but sometimes the truth don't sound like the truth
+Maybe 'cause it ain't, I just love the way it sound when I say it
+Yeah, it's what I do
+If you know me, it ain't anything new
+Wake up to the moon, haven't seen the sun in a while
+But I heard that the sky's still blue, yeah
+Heard they don't talk about me too much no more
+And that's a problem with a closed door
+Good news, good news, good news
+That's all they wanna hear
+No, they don't like it when I'm down
+But when I'm flying, oh, it make 'em so uncomfortable
+So different, what's the difference?
+There's a whole lot more for me waiting on the other side
+I'm always wondering if it feel like summer
+I know maybe I'm too late, I could make it there some other time
+I'll finally discover
+That there's a whole lot more for me waiting
+That there's a whole lot more for me waiting
+I know maybe I'm too late, I could make it there some other time
+Then I'll finally discover
+That it ain't that bad
+Ain't so bad
+Well, it ain't that bad
+At least it don't gotta be no more
+No more, no more, no more, no more
+No more, no more, no more, no more
+Hey
+Mm, hey, mm
+        </pre
+      >
+        </section>
+    </div>
+  </body>
+</html>
