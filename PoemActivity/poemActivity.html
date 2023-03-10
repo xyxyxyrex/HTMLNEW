@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,12 +40,13 @@
         background: #111;
       }
       .songWrapper {
-        width: 80%;
-        height: auto;
+        width: 85%;
+        height: 1000px;
         text-align: center;
         margin: auto;
         margin-top: 2.5%;
-        border: 5px solid black;
+        border: 0.2px solid black;
+        background-color:rgba(39, 39, 39, 0.4);
         font-family:'Lora';
         justify-content:center;
       }
@@ -52,6 +54,11 @@
       .songWrapper>pre{
         color:white;
         font-size: 25px;
+        height:auto;
+      }
+
+      .songWrapper>section{
+        height:2000px;
       }
 
       section {
@@ -74,13 +81,26 @@
         object-fit: cover;
       }
 
-      section h2 {
+      section h2:hover{
         position: relative;
-        color: white;
         font-size: 8em;
         margin: auto;
         font-family: "Tilt Warp";
         display:block;
+        cursor:default;
+        transition:10s;
+        color:red;
+        filter: drop-shadow(25px 25px 25px #f0604d9a);
+      }
+      section h2 {
+        position: relative;
+        font-size: 8em;
+        margin: auto;
+        font-family: "Tilt Warp";
+        display:block;
+        cursor:default;
+        transition:1s;
+        color:grey;
       }
 
       section h3{
@@ -91,7 +111,9 @@
         display:block;
         font-family:'Playfair Display';
         text-decoration:none;
+        cursor:default;
       }
+
 
       .showLyricsTag{
         font-family:'Courier New', Courier, monospace;
@@ -143,15 +165,19 @@
     <section>
       <img src="imgs/1.png" data-speed="-5" class="layer" />
       <img src="imgs/mac2.png" data-speed="-2" class="layer" />
-      <img src="imgs/4.png" data-speed="2" class="layer" />
+      <img src="imgs/4.png" data-speed="7" class="layer" />
       <img src="imgs/mac4.png" data-speed="-6" class="layer" />
-      <img src="imgs/7.png" data-speed="4" class="layer" />
-      <img src="imgs/mac3.png" data-speed="-6" class="layer" />
+      <img src="imgs/7.png" data-speed="8" class="layer" />
+      <img src="imgs/mac3.png" data-speed="-3" class="layer" />
       <img src="imgs/9.png" data-speed="5" class="layer" />
-      <img src="imgs/xyrexname.png" data-speed="-5" class="layer" />
+      <img src="imgs/xyrexname.png" data-speed="-4" class="layer" />
 
       <div class="layer">
-      <h2 class="layer" data-speed="3">Good News</h2>
+
+      <h2 class="layer" data-speed="3" id="audioPlay">
+        <audio id="audio" preload="auto">
+        <source src="audio/playback.mp3">
+    </audio>Good News</h2>
       <h3 class="layer" data-speed="2">Mac Miller</h2>
         <div class="showLyricsWrapper">
             <a href="#lyrics">
@@ -182,6 +208,19 @@
         });
       }
     </script>
+    <script>
+        var playAudio=$("#audio")[0];
+        $(".layer h2")
+        .mouseenter(function(){
+            playAudio.play();
+        })
+
+        .mouseleave(function(){
+        playAudio.pause();
+        playAudio.currentTime = 0;
+        });
+    </script>
+
 
     <div class="songWrapper">
       <pre id="lyrics">
@@ -216,41 +255,8 @@ That's all they wanna hear
 No, they don't like it when I'm down
 But when I'm flying, oh, it make 'em so uncomfortable
 So different, what's the difference?
-When it ain't that bad
-It could always be worse
-I'm running out of gas, hardly anything left
-Hope I make it home from work
-Well, so tired of being so tired
-Why I gotta build something beautiful just to go set it on fire?
-I'm no liar, but sometimes the truth don't sound like the truth
-Maybe 'cause it ain't, I just love the way it sound when I say it
-Yeah, it's what I do
-If you know me, it ain't anything new
-Wake up to the moon, haven't seen the sun in a while
-But I heard that the sky's still blue, yeah
-Heard they don't talk about me too much no more
-And that's a problem with a closed door
-Good news, good news, good news
-That's all they wanna hear
-No, they don't like it when I'm down
-But when I'm flying, oh, it make 'em so uncomfortable
-So different, what's the difference?
-There's a whole lot more for me waiting on the other side
-I'm always wondering if it feel like summer
-I know maybe I'm too late, I could make it there some other time
-I'll finally discover
-That there's a whole lot more for me waiting
-That there's a whole lot more for me waiting
-I know maybe I'm too late, I could make it there some other time
-Then I'll finally discover
-That it ain't that bad
-Ain't so bad
-Well, it ain't that bad
-At least it don't gotta be no more
-No more, no more, no more, no more
-No more, no more, no more, no more
-Hey
-Mm, hey, mm
+SALAZAR, Xyrex Kyle V. BSIT-1B
+
         </pre
       >
         </section>

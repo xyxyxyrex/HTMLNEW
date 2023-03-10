@@ -1,0 +1,225 @@
+body{
+    font-family:'Lato', sans-serif;
+    background-size: cover;
+    background-image: url("https://i.scdn.co/image/ab67616d0000b273f359218480dd62d41ce8154c");
+    color:white;
+}
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+    filter:blur(100px);
+  }
+
+  .musicWrapperHeader{
+    font-weight:bold;
+
+  }
+
+  .musicWrapperHeader2{
+    font-weight:300;
+    
+  }
+
+.musicPlayer{
+    height:95vh;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content:center;
+  
+
+}
+
+.randomActive {
+    color: green;
+  }
+    
+.musicWrapper{
+border:1px solid transparent;
+padding:30px;
+border-radius:20px;
+box-shadow:rgba(0,0,0,0.3) 0px 19px 38px, rgba(0,0,0,0.2) 0px 15px 12px;
+background-color: rgba(78, 78, 78, 0.74);
+
+}
+
+.repeat-enabled {
+    background-color: #ff0;
+  }
+
+.musicDetails{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.track-art{
+    margin:25px;
+    height:250px;
+    width:250px;
+    border:2px solid #fff;
+    background-size:cover;
+    background-position:center;
+    border-radius:50%;
+    -moz-box-shadow:0px 6px 5px #ccc;
+    -webkit-box-shadow:0px 6px 5px #ccc;
+    box-shadow:0px 6px 5px #ccc;
+    -moz-border-radius:190px;
+    -webkit-border-radius:190px;
+    border-radius:190px;
+}
+
+.playpause-track{
+    font-size:2rem;
+
+}
+.now-playing{
+    font-size:1rem;
+}
+.track-name{
+    font-size:2.5rem;
+}
+.track-artist{
+    margin-top:5px;
+    font-size:1.5rem;
+}
+.playerButtons{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    margin-bottom:30px;
+}
+.active{
+    color:black;
+}
+
+.repeat-track, .random-track, .playpause-track, .prev-track, .next-track{
+    padding:25px;
+    opacity:0.8;
+    transition: opacity .2s;
+}
+.repeat-track:hover, .random-track:hover, .playpause-track:hover, .prev-track:hover, .next-track:hover{
+opacity:1.0;
+color:green;
+cursor:pointer;
+transition:0.2s;
+}
+
+.slider-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.seek-slider, .volume-slider{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    height:5px;
+    background:green;
+    -webkit-transition:.2x;
+    transition:opacity .2s;
+}
+
+
+.volume-slider{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    height:5px;
+    background:grey;
+    -webkit-transition:.2x;
+    transition:opacity .2s;
+}
+.volume-slider:hover{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    height:5px;
+    background:green;
+    -webkit-transition:.2x;
+    transition:opacity .2s;
+}
+
+.seek-slider::-webkit-slider-thumb, .volume-slider::-webkit-slider-thumb{
+    -webkit-apperance:none;
+    -moz-appearance:none;
+    appearance: none;;
+    width:15px;
+    height:15px;
+    background:green;
+    border:2px solid white;
+    cursor:pointer;
+    border-radius:100%;
+    margin-top: -5px;
+
+}
+
+.seek-slider::-moz-range-thumb {
+    -webkit-apperance:none;
+    -moz-appearance:none;
+    appearance: none;;
+    width:15px;
+    height:15px;
+    background:#fff;
+    border:3px solid blue;
+    cursor:pointer;
+    border-radius:100%;
+    margin-top: -5px; 
+  }
+
+.seek-slider::-webkit-slider-runnable-track {
+    height: 5px;
+    background: green;
+  }
+  
+.seek-slider:hover, .volumeslider:hover{
+    opacity:1.0;
+}
+.seek-slider{
+    width:60%;
+}
+.volume-slider{
+    width:30%;
+}
+
+.current-time, .total-duration{
+    padding:10px;
+}
+i.fa-volume-down, i.fa-volume-up{
+    padding:10px;
+}
+
+i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward,i.fa-step-backward{
+    cursor:pointer;
+    transition:0.1s;
+}
+
+i.fa-play-circle:hover, i.fa-pause-circle:hover, i.fa-step-forward:hover,i.fa-step-backward:hover{
+    color:green;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.repeat-track:hover, .random-track:hover
+
+i.fa-repeat-track:checked {
+    color: green;
+  }
+  
+i.fa-repeat-track:focus {
+    box-shadow: 0 0 1px green;
+  }
+  
+  input:checked + i.fa-repeat-track:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  
